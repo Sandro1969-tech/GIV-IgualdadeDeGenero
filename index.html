@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GIV – Igualdade de Gênero</title>
+  <link rel="icon" href="image/aids.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#como-ajudar">Como Ajudar</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <img src="image/logoGIV.png" alt="Logo GIV" class="logo" />
+    <h1>GIV – Grupo de Incentivo à Vida</h1>
+    <h2>ODS 5: Igualdade de Gênero e Inclusão LGBTQIA+</h2>
+    <p>Promovendo a igualdade de gênero e o respeito à diversidade</p>
+  </header>
+
+  <main class="container">
+    <section class="intro" id="sobre">
+      <p>Promovemos a cidadania LGBTQIA+ por meio da conscientização, educação e acolhimento.</p>
+      <ul>
+        <li>✔️ Conscientização sobre direitos e deveres</li>
+        <li>✔️ Prevenção de ISTs e HIV/Aids</li>
+        <li>✔️ Integração social de pessoas vivendo com HIV</li>
+        <li>✔️ Atividades culturais e de lazer</li>
+        <li>✔️ Respeito à diversidade sexual</li>
+        <li>✔️ Parcerias com outros grupos</li>
+      </ul>
+      <p>Somos uma ONG comprometida com a ODS 5 da ONU, lutando por um mundo mais justo e inclusivo.</p>
+      <img src="image/ODS.jpg" alt="ODS 5" />
+      <a href="#projetos" class="call-to-action">Conheça nossos projetos</a>
+    </section>
+
+    <section class="gallery" id="projetos">
+      <img src="image/never-give-up.png" alt="Never Give Up" />
+      <img src="image/sapo-GIV.jpg" alt="Mascote GIV com laço vermelho" />
+      <img src="image/Painel.webp" alt="Painel dos 17 ODS" />
+      <img src="image/icone.png" alt="Ícone GIV" />
+      <img src="image/images3.jpg" alt="ODS 5" />
+      <img src="image/images4.jpg" alt="ODS 5" />
+    </section>
+
+    <section class="depoimentos">
+      <h2>Depoimentos</h2>
+      <div class="carousel">
+        <div class="slide active">“O GIV me acolheu quando mais precisei. Gratidão eterna!” – João</div>
+        <div class="slide">“Participar dos projetos me deu força e voz.” – Carla</div>
+        <div class="slide">“Aqui encontrei respeito, apoio e amizade.” – Alex</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section" id="contato">
+        <h3>Contatos úteis</h3>
+        <p>📞 (11) 5084-0255<br><small>Atendimento: 14h às 21h, de terça a quinta-feira</small></p>
+        <p>📧 <a href="mailto:giv@giv.org.br">giv@giv.org.br</a></p>
+        <p>📍 Rua Capitão Cavalcanti, 145<br>Vila Mariana – São Paulo – SP<br>CEP 04017-000</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Reconhecimento</h3>
+        <p>✅ NGOsource Equivalency Determination on File</p>
+        <p>✅ Validated Organization – CAF International</p>
+        <p>🌐 Listado no Global Charity Database</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Links rápidos</h3>
+        <ul>
+          <li><a href="#sobre">Sobre o GIV</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#como-ajudar">Como Ajudar</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Grupo de Incentivo à Vida – GIV. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Carrossel de depoimentos
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 4000);
+
+    // Modo escuro com tecla D
+    document.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'd') {
+        document.body.classList.toggle('dark-mode');
+      }
+    });
+  </script>
+</body>
+</html>
